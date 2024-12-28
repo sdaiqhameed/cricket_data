@@ -1,4 +1,4 @@
-﻿-- =============================================
+-- =============================================
 -- Author:		Sadiq
 -- Create date: 20241206
 -- Description:	Add or update the match
@@ -12,16 +12,21 @@ CREATE PROCEDURE [dbo].[AddUpdateMatch]
     ,@revision VARCHAR(50)
     ,@balls_per_over int
     ,@match_number int
+    ,@stage VARCHAR(50)
     ,@city VARCHAR(50)
     ,@start_date VARCHAR(50)
     ,@gender VARCHAR(50)
     ,@match_type VARCHAR(50)
+    ,@team1ID VARCHAR(50)
+    ,@team2ID VARCHAR(50)
     ,@toss_winner VARCHAR(50)
     ,@toss_decision VARCHAR(50) 
     ,@overs int
     ,@result  VARCHAR(50) 
     ,@winner  VARCHAR(50) 
     ,@win_by  VARCHAR(50)
+    ,@loser  VARCHAR(50)
+    ,@player_of_match VARCHAR(50)
     ,@reserve_umpire VARCHAR(50)
     ,@match_referee VARCHAR(50)
     ,@tv_umpire VARCHAR(50)
@@ -43,16 +48,21 @@ BEGIN
                    ,[revision]
                    ,[balls_per_over]
                    ,[match_number]
+                   ,[stage]
                    ,[city]
                    ,[start_date]
                    ,[gender]
                    ,[match_type]
+                   ,[team1ID]
+                   ,[team2ID]
                    ,[toss_winner]
                    ,[toss_decision]
                    ,[overs]
                    ,[result]
                    ,[winner]
                    ,[win_by]
+                   ,[loser]
+                   ,[player_of_match]
                    ,[reserve_umpire]
                    ,[match_referee]
                    ,[tv_umpire]
@@ -68,16 +78,21 @@ BEGIN
                    ,@revision
                    ,@balls_per_over
                    ,@match_number
+                   ,@stage 
                    ,@city
                    ,@start_date
                    ,@gender
                    ,@match_type
+                   ,@team1ID
+                   ,@team2ID
                    ,@toss_winner
                    ,@toss_decision
                    ,@overs
                    ,@result
                    ,@winner
                    ,@win_by
+                   ,@loser
+                   ,@player_of_match
                    ,@reserve_umpire
                    ,@match_referee
                    ,@tv_umpire
@@ -96,16 +111,21 @@ BEGIN
               ,[revision] = @revision
               ,[balls_per_over] = @balls_per_over
               ,[match_number] = @match_number
+              ,[stage] = @stage 
               ,[city] = @city
               ,[start_date] = @start_date
               ,[gender] = @gender
               ,[match_type] = @match_type
+              ,[team1ID] = @team1ID
+              ,[team2ID] = @team2ID
               ,[toss_winner] = @toss_winner
               ,[toss_decision] = @toss_decision
               ,[overs] = @overs
               ,[result] = @result
               ,[winner] = @winner
               ,[win_by] = @win_by
+              ,[loser] = @loser
+              ,[player_of_match] = @player_of_match 
               ,[reserve_umpire] = @reserve_umpire
               ,[match_referee] = @match_referee
               ,[tv_umpire] = @tv_umpire
